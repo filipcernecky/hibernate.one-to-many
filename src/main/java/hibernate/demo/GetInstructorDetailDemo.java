@@ -1,5 +1,6 @@
 package hibernate.demo;
 
+import hibernate.entity.Course;
 import hibernate.entity.Instructor;
 import hibernate.entity.InstructorDetail;
 import org.hibernate.Session;
@@ -14,6 +15,7 @@ public class GetInstructorDetailDemo {
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
                 .buildSessionFactory();
 
         // create session
@@ -24,7 +26,7 @@ public class GetInstructorDetailDemo {
             session.beginTransaction();
 
             // get the instructor detail object
-            int theId = 1;
+            int theId = 2;
             InstructorDetail tempInstructorDetail =
                     session.get(InstructorDetail.class, theId);
 

@@ -26,10 +26,10 @@ public class CreateInstructorDemo {
         try {
             // create objects
             Instructor tempInstructor =
-                    new Instructor("Vladimir", "Makarov", "WW@luv2code.com");
+                    new Instructor("Mikhail", "Harkov", "MH@luv2code.com");
 
             InstructorDetail tempInstructorDetail =
-                    new InstructorDetail("http://www.Conflict.com/youtube", "Will of single man");
+                    new InstructorDetail("http://www.StalkingGod.com/youtube", "Stalking");
 
             // associate objects
             tempInstructor.setInstructorDetail(tempInstructorDetail);

@@ -1,5 +1,6 @@
 package hibernate.demo;
 
+import hibernate.entity.Course;
 import hibernate.entity.Instructor;
 import hibernate.entity.InstructorDetail;
 import hibernate.entity.Student;
@@ -15,6 +16,7 @@ public class CreateDemo {
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
                 .buildSessionFactory();
 
         // create session

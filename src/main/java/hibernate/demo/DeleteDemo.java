@@ -1,5 +1,6 @@
 package hibernate.demo;
 
+import hibernate.entity.Course;
 import hibernate.entity.Instructor;
 import hibernate.entity.InstructorDetail;
 import org.hibernate.Session;
@@ -16,6 +17,7 @@ public class DeleteDemo {
                 .configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Instructor.class)
                 .addAnnotatedClass(InstructorDetail.class)
+                .addAnnotatedClass(Course.class)
                 .buildSessionFactory();
 
         // create session
@@ -26,7 +28,7 @@ public class DeleteDemo {
             session.beginTransaction();
 
             // get instructor by primary key/id
-            int theId = 1;
+            int theId = 3;
             Instructor tempInstructor =
                     session.get(Instructor.class, theId);
             System.out.println("Found instructor: " + tempInstructor);
